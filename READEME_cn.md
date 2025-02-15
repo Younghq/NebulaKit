@@ -6,20 +6,20 @@
 + main分支：稳定版本分支，由develop合并至此。
 + develop分支：日常开发主分支，所有新功能合并至此。
 ##### 2.辅助分支
-+ feature/模块描述:用于开发新模块，从develop创建分支，合并到develop后删除分支。
-+ hotfix/问题描述:用于修复提交的BUG，从main创建分支，修复后合并到develop和main后删除分支。
-+ docs/修改内容:从develop创建分支，合并到develop后删除。
++ feature/模块描述：用于开发新模块，从develop创建分支，合并到develop后删除分支。
++ hotfix/问题描述：用于修复提交的BUG，从main创建分支，修复后合并到develop和main后删除分支。
++ docs/修改内容：从develop创建分支，合并到develop后删除。
 #### 二、提交信息规范
 ##### 1.结构化格式
 类型：
-+ feat:新功能
++ feat：新功能
 + fix：修复bug
-+ docs:文档变更
++ docs：文档变更
 + refactor：代码重构
 
 示范：
 ``` plaintext
-<类型>(<范围>): <主题>          # 标题行（必填）
+<类型>(<范围>)： <主题>          # 标题行（必填）
 <空行>
 <详细描述>                     # 说明改动背景、方案和影响（可选）
 <空行>
@@ -35,7 +35,7 @@ git checkout -b feature/http-client
 
 # 2. 开发代码...
 git add .
-git commit -m "feat: 实现基础GET请求"
+git commit -m "feat： 实现基础GET请求"
 
 # 3. 合并到 develop
 git checkout develop
@@ -77,7 +77,7 @@ NebulaKit/
 /// 计算数组平均值（无Doxygen冗余标签）  
 /// - 空数组返回0.0  
 /// - 时间复杂度：O(n)  
-double average(const std::vector<double>& data);  
+double average(const std：：vector<double>& data);  
 ```
 2. 代码行注释（三不原则）
 
@@ -86,5 +86,5 @@ double average(const std::vector<double>& data);
 
 ``` cpp
 // 用快速排序替代归并排序：实测数据量<1w时快15%  
-std::sort(data.begin(), data.end());  
+std：：sort(data.begin(), data.end());  
 ```
